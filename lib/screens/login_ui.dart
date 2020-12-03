@@ -23,7 +23,7 @@ class _LoginUIState extends State<LoginUI> {
         child: ListView(
           children: [
             SizedBox(height: height*.3,),
-            Padding(padding: EdgeInsets.only(left: 20),child:    Text("Welcome.!", style: GoogleFonts.inter(
+            Padding(padding: EdgeInsets.only(left: 20),child:    Text("Welcome.!", style: GoogleFonts.montserrat(
                 fontSize: 45,
                 fontWeight: FontWeight.w400
             ),
@@ -40,7 +40,7 @@ class _LoginUIState extends State<LoginUI> {
                       child:MaterialButton(
                       height: 40,
                       color: Colors.deepOrange.shade400,
-                      child: Text("Login",style: GoogleFonts.inter(fontSize: 18,textStyle: TextStyle(color: Colors.white)),),
+                      child: Text("Login",style: GoogleFonts.montserrat(fontSize: 18,textStyle: TextStyle(color: Colors.white)),),
                         onPressed: (){
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) => HomeScreen()));
@@ -51,7 +51,7 @@ class _LoginUIState extends State<LoginUI> {
            Row(
              mainAxisAlignment: MainAxisAlignment.center,
              children: [
-               Text("Don`t have an account ?", style: GoogleFonts.inter(
+               Text("Don`t have an account ?", style: GoogleFonts.montserrat(
                    fontSize: 18,
                    fontWeight: FontWeight.w400
                ),
@@ -62,7 +62,7 @@ class _LoginUIState extends State<LoginUI> {
                    Navigator.push(context,
                        MaterialPageRoute(builder: (context) => SignupUP()));
                  },
-                 child: Text("Sign Up", style: GoogleFonts.inter(
+                 child: Text("Sign Up", style: GoogleFonts.montserrat(
                      fontSize: 18,
                      fontWeight: FontWeight.bold,textStyle: TextStyle(color: Colors.blueAccent)
                  ),
