@@ -3,6 +3,8 @@ import 'package:blog_app/constants/colors.dart';
 import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:blog_app/widgets/textField.dart';
+import 'home_screen.dart';
+import 'signup_ui.dart';
 
 
 import 'package:flutter/material.dart';
@@ -28,18 +30,46 @@ class _LoginUIState extends State<LoginUI> {
             ),),
 
             SizedBox(height: 50,),
-                   CustomInputs(isSecured: false,hint: "Username"),
+                   CustomInputs(isSecured: false,hint: "Email"),
                   CustomInputs(isSecured: true,hint: "Password"),
                   Padding(padding: EdgeInsets.symmetric(vertical: 15,horizontal: 20),
                       child:Material(
                         shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(3) ),
                         color: Colors.deepOrange.shade400,
-                      elevation: 10,
+                      elevation: 5,
                       child:MaterialButton(
                       height: 40,
                       color: Colors.deepOrange.shade400,
                       child: Text("Login",style: GoogleFonts.inter(fontSize: 18,textStyle: TextStyle(color: Colors.white)),),
-                    ),))
+                        onPressed: (){
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => HomeScreen()));
+                        },
+                    ),)),
+            SizedBox(height: 100,),
+            Padding(padding: EdgeInsets.only(left: 20),child:
+           Row(
+             mainAxisAlignment: MainAxisAlignment.center,
+             children: [
+               Text("Don`t have an account ?", style: GoogleFonts.inter(
+                   fontSize: 18,
+                   fontWeight: FontWeight.w400
+               ),
+               ),
+               SizedBox(width: 5,),
+               GestureDetector(
+                 onTap: (){
+                   Navigator.push(context,
+                       MaterialPageRoute(builder: (context) => SignupUP()));
+                 },
+                 child: Text("Sign Up", style: GoogleFonts.inter(
+                     fontSize: 18,
+                     fontWeight: FontWeight.bold,textStyle: TextStyle(color: Colors.blueAccent)
+                 ),
+                 ),
+               )
+             ],
+           )),
           ],
         ),
       ),
