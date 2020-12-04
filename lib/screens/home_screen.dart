@@ -1,3 +1,4 @@
+import 'package:blog_app/widgets/news_item.dart';
 import 'package:blog_app/widgets/top_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
@@ -35,9 +36,13 @@ class _HomeScreenState extends State<HomeScreen> {
         color: Colors.white,
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        child: Column(
+        child: ListView(
           children: [
             TopWidget(),
+            SizedBox(height: 10,),
+            NewsItem(),
+            NewsItem(),
+            NewsItem()
           ],
         ),
       ),
